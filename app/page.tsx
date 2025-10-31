@@ -17,9 +17,10 @@ export default function TechScale() {
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
-    const handleMouseMove = (e) => {
+    const handleMouseMove = (e: MouseEvent) => {
       setMousePosition({ x: e.clientX, y: e.clientY });
     };
+
     window.addEventListener('scroll', handleScroll);
     window.addEventListener('mousemove', handleMouseMove);
     return () => {
